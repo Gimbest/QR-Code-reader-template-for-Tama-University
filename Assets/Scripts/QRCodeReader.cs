@@ -4,12 +4,15 @@ using UnityEngine;
 public class QrCodeScanner : MonoBehaviour
 {
     public GameObject objectToSpawn;
-
     void Start()
     {
         MRUK.Instance.SceneSettings.TrackableAdded.AddListener(OnTrackableAdded);
         MRUK.Instance.SceneSettings.TrackableRemoved.AddListener(OnTrackableRemoved);
     }
+    /// <summary>
+    /// Function called when a trackable is seen by the headset. We make sure that the trackable really is a QR Code
+    /// </summary>
+    /// <param name="qrcode">The QR Code tracked</param>
     public void OnTrackableAdded(MRUKTrackable qrcode)
     {
         if(qrcode.TrackableType != OVRAnchor.TrackableType.QRCode)return;
@@ -32,8 +35,13 @@ public class QrCodeScanner : MonoBehaviour
         
         Debug.Log(payloadString);
     }
+    /// <summary>
+    /// Function called when a trackable is removed
+    /// </summary>
+    /// <param name="qrcode">The QR Code tracked</param>
     public void OnTrackableRemoved(MRUKTrackable trackable)
     {
+        //Feel free to change the logic of the function
         Debug.Log("QRCodeReader | Trackable Removed");
     }
 
