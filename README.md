@@ -4,6 +4,8 @@ This project is, as it's title says, a QR Code reader project template in Mixed 
 ## Dependancies
 This project is meant to work on Meta Quest 3 and 3s. As such, we use the following Meta Quest Libraries on Unity :   
   
+```
 Meta XR Core SDK  
 Meta MR Utility Kit
+```
 
