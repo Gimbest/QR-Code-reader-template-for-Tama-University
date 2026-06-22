@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class QrCodeScanner : MonoBehaviour
 {
-    public GameObject objectToSpawn;
+    [SerializeField] private GameObject objectToSpawn;
     void Start()
     {
         MRUK.Instance.SceneSettings.TrackableAdded.AddListener(OnTrackableAdded);

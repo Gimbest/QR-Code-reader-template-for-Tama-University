@@ -8,4 +8,5 @@ This project is meant to work on Meta Quest 3 and 3s. As such, we use the follow
 Meta XR Core SDK  
 Meta MR Utility Kit
 ```
-
+## What the project does 
+#### This project reads QR codes, displays a check mark to show that the QR code is well read, then writes the payload of the QR code in the Unity console.
